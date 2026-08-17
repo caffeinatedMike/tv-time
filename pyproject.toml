@@ -1,0 +1,15 @@
+[project]
+name = "tv-time"
+version = "0.1.0"
+description = "A fun weekend project to replace my Roku remote's functionality when I ran out of batteries."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "broadlink>=0.19.0",
+    "pynput>=1.8.2",
+    "roku[cli]",
+    "wakepy>=1.0.0",
+]
+
+[tool.uv.sources]
+roku = { git = "https://github.com/jcarbaugh/python-roku.git", rev = "85bf50c0258101652905cf30181172c3377ad104" }
