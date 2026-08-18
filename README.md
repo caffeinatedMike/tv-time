@@ -150,6 +150,15 @@ Time to update `main.MediaMonitor`.
 - Upon hitting `Enter` while typing is enabled, join the entire buffer of characters into a string and send it to the `main.RokuStick.enter_text(...)` method.
 - This had me learning about how to deal with `sys.stdout.write(...)` and `sys.stdout.flush()`. Not very fond of it. Already _flushed_ it from my memory (:awkward_husky_face_meme:).
 
+### Step 7: Creating a convenient launcher
+
+Created a simple shell script `tv-remote.sh` that:
+- `cd`s to the project directory
+- Activates the virtual environment
+- Runs `main.py` as a module: `python -m main`
+
+Once I marked it as executable (`chmod +x ./tv-remote.sh`) it worked like a charm. I didn't feel like selecting "Run in terminal" every time I clicked the script on my desktop to launch it, though. So, I decided to make a .desktop shortcut for the script. After another quick Google search and the help of `desktop-file-validate`, I had my one-click script. I even tracked down a suitable icon to make it stand out.
+
 ---
 
 **Fin.**
